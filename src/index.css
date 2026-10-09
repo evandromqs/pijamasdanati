@@ -35,8 +35,16 @@
     font-size: max(18px, 1rem);
   }
 
-  h1, h2, h3, h4, .font-serif-brand {
+  h1, h2, h3, h4, h5, h6, .font-serif-brand {
     font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Prevent heading spans from shrinking to the 18px body minimum */
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
   }
 
   .font-script-brand {

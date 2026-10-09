@@ -32,7 +32,7 @@ export function BrandLogo({ size = 'md', showText = true, showTagline = false, c
             <span className="font-serif-brand font-bold text-[24px] sm:text-[28px] tracking-tight text-[#A5335E]">
               Pijamas
             </span>
-            <span className="font-script-brand text-[26px] sm:text-[30px] text-[#A05F66]">
+            <span className="font-serif-brand font-bold text-[24px] sm:text-[28px] tracking-tight text-[#695A59]">
               da Naty
             </span>
           </div>

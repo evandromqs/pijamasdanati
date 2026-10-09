@@ -16,7 +16,6 @@ import {
   Eye,
   Star,
   Gift,
-  Moon,
   Send,
   MapPin,
   Clock,
@@ -286,17 +285,10 @@ export default function App() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               {/* Left Column: Brand Promise & CTAs */}
               <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FEE1DD] border border-[#CAA79B]/50 text-[#921644] text-[18px] font-semibold">
-                  <Moon className="w-5 h-5 text-[#A5335E] shrink-0" />
-                  <span>Conforto em todas as noites • Por Nataly Greice</span>
-                </div>
-
                 <h1 className="font-serif-brand font-bold text-[36px] sm:text-5xl lg:text-6xl text-[#695A59] leading-[1.12] tracking-tight">
                   O abraço em forma de{' '}
-                  <span className="text-[#A5335E] italic font-normal">
-                    pijama
-                  </span>{' '}
-                  que suas noites merecem.
+                  <span className="text-[#A5335E]">pijama</span> que suas
+                  noites merecem.
                 </h1>
 
                 <p className="text-[18px] sm:text-xl text-[#4A4042]/95 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -675,9 +667,8 @@ export default function App() {
             {/* Custom Catalog Banner: Infantil, Masculino & Shopee */}
             <div className="mt-12 rounded-3xl bg-gradient-to-r from-[#FEE1DD] via-[#FBF5F2] to-[#FEE1DD] p-6 sm:p-10 border border-[#CAA79B]/50 flex flex-col lg:flex-row items-center justify-between gap-6">
               <div className="space-y-3 text-center lg:text-left max-w-2xl">
-                <p className="inline-flex items-center gap-2 text-[18px] font-bold text-[#921644]">
-                  <Sparkles className="w-5 h-5 shrink-0" />
-                  <span>Atendimento para Toda a Família</span>
+                <p className="text-[18px] font-bold text-[#921644] uppercase tracking-wider">
+                  Atendimento para Toda a Família
                 </p>
                 <h3 className="font-serif-brand font-bold text-[28px] sm:text-4xl text-[#695A59] leading-tight">
                   Procurando numeração específica, linha Masculina, Infantil ou
@@ -854,10 +845,6 @@ export default function App() {
               </div>
 
               <div className="lg:col-span-7 space-y-5">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FEE1DD] text-[#921644] text-[18px] font-bold">
-                  <Gift className="w-5 h-5 shrink-0" />
-                  <span>Experiência Completa</span>
-                </span>
                 <h2 className="font-serif-brand font-bold text-[32px] sm:text-4xl text-[#695A59] leading-tight">
                   Um pacotinho de amor pensado nos mínimos detalhes
                 </h2>
@@ -905,10 +892,6 @@ export default function App() {
         <section id="feedbacks" className="py-16 sm:py-20 bg-[#FBF5F2]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FEE1DD] text-[#921644] text-[18px] font-bold">
-                <Heart className="w-5 h-5 fill-current shrink-0" />
-                <span>Destaques de Feedbacks Reais</span>
-              </span>
               <h2 className="font-serif-brand font-bold text-[34px] sm:text-5xl text-[#695A59] leading-tight">
                 Quem Veste Pijamas da Naty, Se Apaixona
               </h2>
