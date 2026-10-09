@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #FFFBFC;
+    --bg-secondary: #FBF5F2;
+    --brand-pastel: #FEE1DD;
+    --brand-blush: #FAD1CD;
+    --brand-marsala: #A05F66;
+    --brand-berry: #A5335E;
+    --brand-berry-dark: #921644;
+    --brand-gold: #CAA79B;
+    --text-heading: #695A59;
+    --text-body: #4A4042;
+    --text-muted: #8C7A7B;
+    --border-soft: #E4D6D9;
+  }
+
+  html {
+    font-size: 18px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-body);
+    overflow-x: hidden;
+  }
+
+  /* Guarantee minimum 18px across all text, buttons, inputs and labels */
+  p, span, a, button, input, select, textarea, li, label {
+    font-size: max(18px, 1rem);
+  }
+
+  h1, h2, h3, h4, .font-serif-brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script-brand {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+/* Soft ambient glow matching brand storytelling slides */
+.brand-ambient-glow {
+  background: radial-gradient(circle at 85% 15%, rgba(250, 209, 205, 0.45) 0%, rgba(255, 251, 252, 0) 55%),
+              radial-gradient(circle at 10% 80%, rgba(254, 225, 221, 0.4) 0%, rgba(255, 251, 252, 0) 50%);
+}
+
+.card-soft-shadow {
+  box-shadow: 0 12px 32px -8px rgba(160, 95, 102, 0.09), 0 2px 6px -1px rgba(160, 95, 102, 0.04);
+}
+
+.card-soft-shadow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-soft-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(165, 51, 94, 0.14), 0 4px 12px -2px rgba(160, 95, 102, 0.06);
+}
