@@ -128,24 +128,22 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FFFBFC] text-[#4A4042] text-[18px] pb-24 sm:pb-0">
       {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-gradient-to-r from-[#921644] via-[#A5335E] to-[#921644] text-white text-[18px] py-3 px-4 text-center font-medium">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1.5">
-          <span className="inline-flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-[#FEE1DD] shrink-0" />
-            <span>Tecido Suede Macio • Envio em até 3 dias</span>
-          </span>
-          <span className="hidden lg:inline text-white/40">•</span>
-          <span className="hidden lg:inline-flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-[#FEE1DD] shrink-0" />
-            <span>Atendemos Toda São Paulo + Loja Shopee</span>
+      <div className="bg-gradient-to-r from-[#921644] via-[#A5335E] to-[#921644] text-white text-[16px] sm:text-[18px] py-2 px-3 text-center font-medium">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
+          <Sparkles className="w-4 h-4 text-[#FEE1DD] shrink-0" />
+          <span className="truncate">Tecido Suede • Envio em até 3 dias</span>
+          <span className="hidden sm:inline text-white/40">•</span>
+          <span className="hidden sm:inline-flex items-center gap-1.5">
+            <MapPin className="w-4 h-4 text-[#FEE1DD] shrink-0" />
+            <span>São Paulo + Shopee</span>
           </span>
         </div>
       </div>
 
       {/* 2. STICKY HEADER */}
       <header className="sticky top-0 z-40 bg-[#FFFBFC]/95 backdrop-blur-md border-b border-[#E4D6D9]/80 transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[78px] py-2.5 flex items-center justify-between gap-3">
-          <a href="#" className="focus:outline-none">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 min-h-[60px] sm:min-h-[74px] py-1.5 sm:py-2.5 flex items-center justify-between gap-2.5">
+          <a href="#" className="focus:outline-none shrink-0">
             <BrandLogo size="sm" showText={true} showTagline={false} />
           </a>
 
@@ -184,15 +182,15 @@ export default function App() {
           </nav>
 
           {/* Header Actions */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2">
             <button
               onClick={() => setIsBagOpen(true)}
-              className="relative inline-flex items-center gap-2 px-4 py-2.5 min-h-[48px] rounded-full bg-[#FEE1DD]/80 hover:bg-[#FAD1CD] text-[#921644] text-[18px] font-semibold transition-all cursor-pointer border border-[#CAA79B]/50"
+              className="relative p-2 sm:px-4 sm:py-2.5 min-w-[44px] min-h-[44px] rounded-full bg-[#FEE1DD]/80 hover:bg-[#FAD1CD] text-[#921644] text-[18px] font-semibold transition-all cursor-pointer border border-[#CAA79B]/50 flex items-center justify-center gap-1.5"
               title="Abrir Minha Sacolinha de Interesse"
             >
               <ShoppingBag className="w-5 h-5 shrink-0" />
               <span className="hidden md:inline">Sacolinha</span>
-              <span className="inline-flex items-center justify-center min-w-[28px] h-7 px-2 rounded-full bg-[#A5335E] text-white text-[18px] font-bold">
+              <span className="inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 rounded-full bg-[#A5335E] text-white text-[14px] sm:text-[16px] font-bold">
                 {totalBagCount}
               </span>
             </button>
@@ -203,7 +201,7 @@ export default function App() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 min-h-[48px] rounded-full bg-[#A5335E] hover:bg-[#921644] text-white text-[18px] font-semibold shadow-sm transition-all"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-full bg-[#A5335E] hover:bg-[#921644] text-white text-[18px] font-semibold shadow-sm transition-all"
             >
               <MessageCircle className="w-5 h-5 shrink-0" />
               <span>WhatsApp</span>
@@ -211,13 +209,13 @@ export default function App() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full text-[#695A59] bg-[#FBF5F2] hover:bg-[#FEE1DD]/60 border border-[#E4D6D9]"
+              className="xl:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-[#695A59] bg-[#FBF5F2] hover:bg-[#FEE1DD]/60 border border-[#E4D6D9]"
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -280,12 +278,12 @@ export default function App() {
 
       <main className="flex-1">
         {/* 3. HERO SECTION */}
-        <section className="relative brand-ambient-glow overflow-hidden pt-8 pb-14 sm:py-20 border-b border-[#E4D6D9]/60">
+        <section className="relative brand-ambient-glow overflow-hidden pt-4 pb-10 sm:py-20 border-b border-[#E4D6D9]/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Brand Promise & CTAs */}
-              <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <h1 className="font-serif-brand font-bold text-[36px] sm:text-5xl lg:text-6xl text-[#695A59] leading-[1.12] tracking-tight">
+              <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+                <h1 className="font-serif-brand font-bold text-[28px] sm:text-5xl lg:text-6xl text-[#695A59] leading-[1.14] tracking-tight">
                   O abraço em forma de{' '}
                   <span className="text-[#A5335E]">pijama</span> que suas
                   noites merecem.
@@ -296,16 +294,16 @@ export default function App() {
                   <strong className="text-[#921644] font-semibold">
                     Tecido Suede Ultra Macio
                   </strong>
-                  . Peças pensadas para valorizar o seu corpo sem apertar,
-                  trazendo conforto térmico, personalidade e autoestima para o
-                  seu momento sagrado de descanso.
+                  . Peças pensadas para valorizar seu corpo sem apertar, trazendo
+                  conforto térmico e muito carinho para o seu momento sagrado de
+                  descanso.
                 </p>
 
-                {/* Primary Hero CTAs */}
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 pt-2">
+                {/* Primary Hero CTAs (Immediately Accessible on Mobile) */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1">
                   <a
                     href="#catalogo"
-                    className="w-full sm:w-auto min-h-[56px] inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full bg-[#A5335E] hover:bg-[#921644] text-white font-semibold text-[18px] shadow-md hover:shadow-lg transition-all"
+                    className="w-full sm:w-auto min-h-[50px] sm:min-h-[56px] inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-3.5 sm:py-4 rounded-full bg-[#A5335E] hover:bg-[#921644] text-white font-semibold text-[18px] shadow-md transition-all active:scale-[0.98]"
                   >
                     <ShoppingBag className="w-5 h-5 shrink-0" />
                     <span>Ver Catálogo de Pijamas</span>
@@ -317,7 +315,7 @@ export default function App() {
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto min-h-[56px] inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full bg-white hover:bg-[#FEE1DD]/50 text-[#921644] border-2 border-[#CAA79B] font-semibold text-[18px] transition-all"
+                    className="w-full sm:w-auto min-h-[50px] sm:min-h-[56px] inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-[#FEE1DD]/50 text-[#921644] border-2 border-[#CAA79B] font-semibold text-[18px] transition-all active:scale-[0.98]"
                   >
                     <MessageCircle className="w-5 h-5 text-[#25D366] shrink-0" />
                     <span>Falar com a Naty</span>
@@ -325,25 +323,25 @@ export default function App() {
                 </div>
 
                 {/* Quick Highlights List */}
-                <div className="pt-3 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-[18px] text-[#695A59]">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#A5335E] shrink-0" />
-                    <span>Feminino 20+, Infantil & Masculino</span>
+                <div className="pt-2 sm:pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-[18px] text-[#695A59]">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#A5335E] shrink-0" />
+                    <span>Feminino, Infantil & Masculino</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#A5335E] shrink-0" />
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#A5335E] shrink-0" />
                     <span>Não encolhe e não desbota</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#A5335E] shrink-0" />
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#A5335E] shrink-0" />
                     <span>Pix e Cartão</span>
                   </div>
                 </div>
               </div>
 
               {/* Right Column: Visual Showcase (Mobile-Responsive) */}
-              <div className="lg:col-span-5 relative">
-                <div className="relative mx-auto max-w-lg lg:max-w-none space-y-4">
+              <div className="lg:col-span-5 relative mt-2 lg:mt-0">
+                <div className="relative mx-auto max-w-lg lg:max-w-none space-y-3 sm:space-y-4">
                   {/* Decorative Soft Circle Behind */}
                   <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-tr from-[#FEE1DD] via-[#FAD1CD]/50 to-transparent blur-xl -z-10" />
 
@@ -352,9 +350,9 @@ export default function App() {
                     <img
                       src={`${import.meta.env.BASE_URL}assets/products/pijama-americano-longo-rosa.png`}
                       alt="Nataly Greice vestindo Pijama Americano Rosa Pijamas da Naty"
-                      className="w-full h-[380px] sm:h-[420px] object-cover object-top"
+                      className="w-full h-[280px] sm:h-[420px] object-cover object-top"
                     />
-                    <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-[#E4D6D9]">
+                    <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-[#E4D6D9]">
                       <p className="text-[18px] font-bold text-[#A5335E]">
                         ✨ Conforto que Abraça
                       </p>
@@ -501,15 +499,15 @@ export default function App() {
               </p>
             </div>
 
-            {/* Category Filter Pills (Mobile-Friendly Wrap / Scroll) */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            {/* Category Filter Pills (Mobile-Friendly Horizontal Scroll & Wrap) */}
+            <div className="mt-6 sm:mt-8 flex overflow-x-auto no-scrollbar sm:flex-wrap items-center justify-start sm:justify-center gap-2 sm:gap-3 py-2 px-1 -mx-2 sm:mx-0">
               {CATEGORIES.map((cat) => {
                 const isActive = activeCategory === cat.id;
                 return (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`px-5 py-3 min-h-[50px] rounded-full text-[18px] font-semibold transition-all cursor-pointer flex items-center gap-2 ${
+                    className={`shrink-0 px-4 sm:px-5 py-2.5 sm:py-3 min-h-[46px] sm:min-h-[50px] rounded-full text-[18px] font-semibold transition-all cursor-pointer flex items-center gap-2 active:scale-95 ${
                       isActive
                         ? 'bg-[#A5335E] text-white shadow-md'
                         : 'bg-[#FBF5F2] hover:bg-[#FEE1DD]/70 text-[#695A59] border border-[#E4D6D9]'
@@ -517,7 +515,7 @@ export default function App() {
                   >
                     {cat.highlight && (
                       <Sparkles
-                        className={`w-5 h-5 shrink-0 ${
+                        className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 ${
                           isActive ? 'text-[#FEE1DD]' : 'text-[#A5335E]'
                         }`}
                       />
@@ -529,7 +527,7 @@ export default function App() {
             </div>
 
             {/* Product Grid (1 col mobile, 2 cols tablet, 3 cols desktop for comfortable 18px text) */}
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
               {filteredProducts.map((product) => {
                 const currentSize = getSelectedSize(product);
 
@@ -549,7 +547,7 @@ export default function App() {
                       {/* Top Badge */}
                       <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 pointer-events-none">
                         <span
-                          className={`px-4 py-1.5 rounded-full text-[18px] font-bold shadow-sm ${
+                          className={`px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-[16px] sm:text-[18px] font-bold shadow-sm ${
                             product.badgeType === 'berry'
                               ? 'bg-[#A5335E] text-white'
                               : product.badgeType === 'dark'
@@ -566,16 +564,16 @@ export default function App() {
                       {/* Quick View Button Overlay */}
                       <button
                         onClick={() => setQuickViewProduct(product)}
-                        className="absolute bottom-3.5 right-3.5 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-[#695A59] hover:text-[#A5335E] shadow-md flex items-center justify-center transition-all cursor-pointer"
+                        className="absolute bottom-3.5 right-3.5 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-[#695A59] hover:text-[#A5335E] shadow-md flex items-center justify-center transition-all cursor-pointer active:scale-95"
                         title="Ver detalhes da peça"
                         aria-label="Ver detalhes da peça"
                       >
-                        <Eye className="w-6 h-6" />
+                        <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
                       </button>
                     </div>
 
                     {/* Product Info Body */}
-                    <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
+                    <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
                       <div className="space-y-2.5">
                         <p className="text-[18px] font-semibold text-[#A05F66]">
                           {product.categoryLabel}
@@ -1132,10 +1130,10 @@ export default function App() {
       </footer>
 
       {/* STICKY MOBILE BOTTOM ACTION BAR (THUMB-FRIENDLY ERGONOMICS) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFFBFC]/95 backdrop-blur-md border-t border-[#E4D6D9] p-3 flex items-center gap-2.5 shadow-2xl">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFFBFC]/95 backdrop-blur-md border-t border-[#E4D6D9] p-2.5 pb-[max(0.65rem,env(safe-area-inset-bottom))] flex items-center gap-2 shadow-2xl">
         <button
           onClick={() => setIsBagOpen(true)}
-          className="flex-1 min-h-[54px] px-4 py-3 rounded-2xl bg-[#FEE1DD] text-[#921644] font-bold text-[18px] flex items-center justify-center gap-2 border border-[#CAA79B]/60 cursor-pointer"
+          className="flex-1 min-h-[48px] px-3 py-2.5 rounded-xl bg-[#FEE1DD] hover:bg-[#FAD1CD] text-[#921644] font-bold text-[18px] flex items-center justify-center gap-2 border border-[#CAA79B]/60 cursor-pointer active:scale-[0.98] transition-all"
         >
           <ShoppingBag className="w-5 h-5 shrink-0" />
           <span>Sacola ({totalBagCount})</span>
@@ -1147,7 +1145,7 @@ export default function App() {
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 min-h-[54px] px-4 py-3 rounded-2xl bg-[#25D366] text-white font-bold text-[18px] flex items-center justify-center gap-2 shadow-md"
+          className="flex-1 min-h-[48px] px-3 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-[18px] flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all"
         >
           <MessageCircle className="w-5 h-5 fill-current shrink-0" />
           <span>WhatsApp</span>
